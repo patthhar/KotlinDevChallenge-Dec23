@@ -10,9 +10,14 @@ package week_1
 fun solve(input: Long): List<Int> {
   var num = input
   val digits = mutableListOf<Int>()
+  if (num == 0L) digits.add(0)
   while (num > 0) {
     digits.add((num % 10).toInt())
     num /= 10
   }
   return digits.reversed()
+}
+
+fun main() {
+  println(solve(0))
 }
